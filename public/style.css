@@ -1,0 +1,398 @@
+/*
+
+Tudo são BOX e conteudo
+
+Espaçamentos
+Preenchimentos
+Bordas
+
+Posicionamentos
+
+*/
+
+/*Códigos Globais */
+
+body{
+    background: #e5e5e5;
+    color: #25282b;
+
+    font-family: 'Montserrat', sans-serif;
+
+    margin: 0;
+}
+
+body.hideScroll{
+    overflow: hidden;
+}
+
+a {
+    color: #ff5e84;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p, .description{
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+.button{
+    /* Configurações do segundo Botão */
+    color: white;
+    background: #ff5e84;
+
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+
+    width: 150px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Arredondamento das bordas do botão */
+    border-radius: 10px 0;
+
+    /* sobra em baixo do botão */
+    box-shadow: 0px 8px 16px rgba(255, 0, 92, 0.16);
+}
+.button:hover{
+    /* Não ficar um underline quando se passa o mouse sobre o segundo botão */
+    color: white;
+    background:  #0984e3;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+/* CÓDIGOS PADRÕES */
+
+#container{
+    /*background: green;*/
+    width: 80%;
+    max-width: 980px;
+
+    margin: 40px auto;
+    
+    display: flex;
+}
+
+#intro{
+    width: 300px;
+    margin-right: 64px;
+}
+
+main{
+    margin: 32px 0 ;
+}
+
+#buttons {
+    /* Configurações dos espaçamentos entre os botões */
+    display: flex;
+    justify-content: space-evenly;
+
+    margin-bottom: 32px;
+
+}
+button{
+    /* Configurações do primeiro Botão */
+
+    color: #ff5e84;
+    border: none;
+    background: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover{
+    /* Ficar um underline quando se passar o mouse sobre o primeiro botão 
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: bold;*/
+    text-decoration: underline;
+}
+
+
+footer{
+    /*Configurações do Rocketseat*/
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2;
+
+    color: #777;
+        
+    /*margin-top: 32px;
+    
+    color:black;
+    
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: 0.2px;*/
+}
+
+footer a{
+    opacity: 0.7;
+}
+
+.ideia{
+
+    display: flex;
+
+    background-color: #FFF;
+    box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
+    border-radius: 8px;
+
+    padding: 20px;
+    
+    margin-bottom: 32px;
+    
+}
+
+.ideia img{
+    width: 60px;
+    height: 60px;
+
+    margin-right: 32px;
+
+}
+
+.ideia h3{
+    margin: 0;
+}
+
+.ideia p{
+    margin: 8px 0;
+    color: #777;
+}
+
+.ideia description{
+    margin: 16px 0;
+}
+
+/*Modal*/
+#modal{
+    background: #ff5e84;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    /* Configuração do Modal "Formulário"
+    Porém, com essas configurações ativadas,
+    Fica uma barra de rolagem na tela principal
+    width: 100vw;
+    height: 100vw;*/
+
+    display: flex;
+    justify-content: center;
+
+    transition: 400ms;
+}
+
+#modal.addScroll{
+    overflow: auto;
+}
+
+#modal .content{
+    margin-top: 5%;
+
+    color: white;
+}
+
+#modal .content h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#modal form{
+    width: 80%;
+    max-width: 800px;
+
+    margin: 0 auto 15%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5){
+    grid-column: span 2;
+}
+
+form input, 
+form textarea{
+    width: 100%;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    border-radius: 6px;
+    border: 1px solid rgba(141, 25, 52, 0.5);
+
+    outline: none;
+
+    font-size: 16px;
+
+}
+
+form label{
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+form a{
+
+    width: 150px;
+    height: 40px;
+
+    background-color: #ffffff22 ;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: bold;
+    
+    border-radius: 6px;
+    
+    align-self: end;
+
+    transition: 400ms;
+
+}
+
+form a:hover{
+    background: #fff;
+    color: #ff5e84;
+
+    text-decoration: none;
+
+}
+
+form button{
+    background: white;
+    width: 150px;
+    height: 40px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    margin-top: 32px;
+
+    grid-column: 2;
+
+    justify-self: end;
+
+    transition: 400ms;
+}
+
+form button:hover{
+
+    background-color: blue;
+    color: white;
+
+    text-decoration: none;    
+}
+
+#modal.hide{
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* IDEIA.HTML */
+
+#page-ideias #container{
+    display: block;
+}
+
+#page-ideias header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideias nav{
+    /*Configurações das letras do canto superior direito*/
+    display: flex;
+    align-items: center;
+}
+
+#page-ideias nav li{
+    /* Configuração das linhas entre os botões no cando direito*/
+    list-style-type: none;
+    margin-right: 16px;
+}
+
+#page-ideias nav li a{
+    /*Configuração das escritas do Header */
+    color: #25282b; 
+}
+
+#page-ideias nav li a.button{
+    /*Configuração das escritas do Header */
+    color: white;
+}
+
+#page-ideias nav li:last-child {
+    /* Configuração do Botão do Nova Idéia */
+    margin: 0;
+}
+
+section#title{
+    /* Configuração do Titulo da página */
+    text-align: center ;
+    margin: 64px 0;
+}
+
+section#title p {
+    /* Configuração do "P" no titulo */
+    opacity: 0.7;
+    margin: 0;
+}
+
+section#title h1{
+    /* Configuração do "H1" da página */
+    margin: 0;
+    font-size: 28px;
+}
+
+section#ideias{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+section#ideias .ideia{
+    margin: 0;
+}
+
+section#title,
+section#ideias,
+footer{
+    margin-top: 64px;
+}
+
